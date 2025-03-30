@@ -21,25 +21,3 @@ class SimpleMath:
     def Tukar(self, a, b):
         a, b = b, a
         return a, b
-    
-
-def main():
-    math = SimpleMath()
-    
-    bil1 = 10
-    bil2 = 27
-
-    hasil = math.Jumlah(bil1, bil2)
-    print(hasil)
-
-    bil1, bil2, = math.Tukar(bil1, bil2)
-
-    print(bil1)
-    print(bil2)
-
-    return 0
-
-
-
-if __name__ == '__main__':
-    main()    
