@@ -9,5 +9,11 @@ data = {
 }
 
 df = pd.DataFrame(data)
+df["Rerata Siswa"] = df.iloc[:, 1:].mean(axis=1)
+
+rerata_kelas = df.iloc[:, 1:].mean(axis=0)
+rerata_kelas["Nama"] = "Rerata Kelas"
+df = pd.concat([df, pd.DataFrame([rerata_kelas])], ignore_index=True)
 
 print("Data\n", df)
+# print("\nkelas\n", rerata_kelas)
